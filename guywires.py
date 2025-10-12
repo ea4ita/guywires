@@ -120,10 +120,11 @@ def get_tensions(
 
 print(f"Wind pressure: {wind_presure} N")
 print(f"Guy wires angles: {guy_wires_angles}")
+print("Angle,  Tension 1, Tension 2, Tension 3,")
 for angle in range(0, 360, 10):
     tensions = get_tensions(wind_presure, angle, guy_wires_angles)
-    print(f"{angle}\t", end="")
+    print(f"  {angle:3.0f}, ", end="")
     for tension in tensions:
-        print(f"{tension:.2f}\t", end="")
+        print(f"{tension:10.2f},", end="")
     print("")
 # endregion
